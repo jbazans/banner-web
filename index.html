@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Banner Web</title>
+	<style type="text/css">
+		body,html{
+			margin: 0;
+			padding: 0;
+		}
+		.main-banner{
+			width: 100%;
+			height: 250px;
+			background: url("img/fondo.jpg");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			position: relative;
+		}
+		.img1{
+			width: 250px;
+			height: 250px;
+			background: url("img/goku.png");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			position: absolute;
+			top: 0;
+			animation: imgonecenter 10s linear infinite;
+		}
+		@keyframes imgonecenter{
+			0%{
+				opacity: 0;
+				left: 0;
+			}
+			20%{
+				opacity: 1;
+				left: calc(50% - 125px);
+			}
+			100%{
+				opacity: 1;
+				left: calc(50% - 125px);
+			}
+		}
+		.img2{
+			width: 100px;
+			height: 100px;
+			background: url("img/hamehame.png");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			position: absolute;
+			top: 120px;
+			left: calc(50% - 80px);
+			animation: imgtwocenter 10s linear infinite;
+		}
+		@keyframes imgtwocenter{
+			0%{
+				opacity: 0;
+			}
+			20%{
+				opacity: 0;
+			}
+			50%{
+				opacity: 1;
+			}
+			100%{
+				opacity: 1;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="main-banner">
+		<div class="img1"></div>
+		<div class="img2"></div>
+	</div>
+</body>
+</html>
